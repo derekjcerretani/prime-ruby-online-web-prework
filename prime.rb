@@ -1,12 +1,7 @@
 # Add  code here!
-=begin
-def prime?(num)
-  (2..(num - 1)).each do |n|
-    return false if num % n == 0
-  end
-  true
-end
-=end
+require 'benchmark'
+
+
 def prime?(num)
   if num <= 1
     return false
@@ -18,3 +13,5 @@ def prime?(num)
   end
   true
 end
+
+puts Benchmark.measure{prime?()}
